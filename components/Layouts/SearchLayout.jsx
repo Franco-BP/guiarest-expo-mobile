@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { View, Image, StyleSheet, Dimensions, TextInput, FlatList, Text } from 'react-native'
+import { View, Image, StyleSheet, Dimensions, TextInput, FlatList, Text, TouchableOpacity } from 'react-native'
 import { storeContext } from '../Context/StoreProvider';
 import SearchItem from '../Items/SearchItem';
+import { Link } from 'expo-router'; 
 
 const SearchLayout = () => {
   const [store, dispatch] = useContext(storeContext);
@@ -12,6 +13,7 @@ const SearchLayout = () => {
   const dimensionsHeight = Dimensions.get('window').height;
   const dimensionsWidth = Dimensions.get('window').width;
   const SEARCH_ICON = 'https://cdn2.iconfinder.com/data/icons/minimal-set-five/32/minimal-48-512.png';
+  const GO_BACK_ICON = 'https://cdn-icons-png.flaticon.com/512/54/54321.png';
   const restaurants = store.restaurants;
 
   const styles = StyleSheet.create({
@@ -68,6 +70,11 @@ const SearchLayout = () => {
   return (
     <View style={styles.container}>
       <View style={styles.searchBarContainer}> 
+        <Link href="/" asChild>
+          <TouchableOpacity>
+            <Image style={styles.searchIcon} source={{uri: GO_BACK_ICON}} />
+          </TouchableOpacity>
+        </Link>
         <Image style={styles.searchIcon} source={{uri: SEARCH_ICON}} />
         <TextInput
           style={styles.input}
