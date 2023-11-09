@@ -41,7 +41,7 @@ export default function restaurantId() {
     <View style={styles.container}>
       <SafeAreaView style={styles.container}>
         <StoreProvider>
-          <RestaurantLayout restaurant={RESTAURANT_INFO} mainAds={MAIN_ADS}/>
+          <RestaurantLayout restaurantId={id} />
         </StoreProvider>
       </SafeAreaView>
       <StatusBar style="auto" />

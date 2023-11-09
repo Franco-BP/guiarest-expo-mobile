@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { Link } from 'expo-router';
 
 const RestaurantItem = ({title, imageLink}) => {
   const dimensionsWidth = Dimensions.get('window').width;
@@ -36,12 +37,14 @@ const RestaurantItem = ({title, imageLink}) => {
   })
 
   return (
-    <TouchableOpacity style={styles.item}>
-      <Image style={styles.logo} source={{uri: imageLink}} />
-      <View style={styles.titleBackground}>
-          <Text style={styles.title}>{title}</Text>
-      </View>
-    </TouchableOpacity>
+    <Link href={'/restaurant/' + title} asChild>
+      <TouchableOpacity style={styles.item}>
+        <Image style={styles.logo} source={{uri: imageLink}} />
+        <View style={styles.titleBackground}>
+            <Text style={styles.title}>{title}</Text>
+        </View>
+      </TouchableOpacity>
+    </Link>
   );
 };
 

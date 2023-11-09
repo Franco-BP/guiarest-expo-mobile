@@ -87,7 +87,7 @@ const SearchLayout = () => {
       <View style={styles.suggestionListContainer}>
         <FlatList
           data={suggestions}
-          keyExtractor={(item) => item.key}
+          keyExtractor={(item) => item.title}
           renderItem={(object) => <SearchItem item={object.item} />}
         />
       </View>
