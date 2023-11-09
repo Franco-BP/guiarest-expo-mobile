@@ -2,7 +2,6 @@ import {
   MAIN_ADS,
   RESTAURANTS,
   SHOWS,
-  RESTAURANT_INFO,
 } from './Data.jsx';
 
 const initialStore = () => {
@@ -10,7 +9,6 @@ const initialStore = () => {
     mainAds: MAIN_ADS,
     restaurants: RESTAURANTS,
     shows: SHOWS,
-    restaurantInfo: RESTAURANT_INFO,
   };
   return store;
 };

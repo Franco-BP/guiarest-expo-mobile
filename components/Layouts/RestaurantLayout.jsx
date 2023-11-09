@@ -1,15 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Carousel from '../Carousel/Carousel';
 import MapView from 'react-native-maps';
 import { Dimensions, ScrollView, StyleSheet, View, Text, Button } from 'react-native';
+import { storeContext } from '../Context/StoreProvider';
 
-const RestaurantLayout = ({restaurant, mainAds}) => {
+const HARDCODED_REST = {
+  description: "Horario: de 12 a 22 horas.\nSolo retiro en el local.\nESTE ES EL OBJETO HARDCODEADO",
+}
+
+const RestaurantLayout = ({restaurantId}) => {
   const dimensionsWidth = Dimensions.get('window').width;
   const dimensionsHeight = Dimensions.get('window').height;
+
+  const [state, dispatch] = useContext(storeContext);
+  const [restaurant, setRestaurant] = useState(null);
+  const mainAds = state.mainAds;
 
   const [section, setSection] = useState('menu');
   const [menuColor, setMenuColour] = useState('grey');
   const [showsColor, setShowsColour] = useState('white');
+
+  useEffect(() => {
+    let indexOfRestaurant = -1;
+    store.restaurants.map(element => {
+      if (element.title === restaurantId) {
+        indexOfRestaurant = store.restaurants.indexOf(element);
+      };
+    })
+    let tempRestaurant = indexOfRestaurant > -1 ? store.restaurants.at(indexOfRestaurant) : HARDCODED_REST;
+    setRestaurant( tempRestaurant );
+  }, [])
 
   useEffect(() => {
     switch (section) {
