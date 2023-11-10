@@ -35,7 +35,7 @@ const RestaurantLayout = ({restaurantId}) => {
         <Image style={styles.showIcon} source={{uri: show.imageLink}}/>
         <View style={styles.showTextContainer}>
           <Text style={{...styles.showText, fontSize: 20, fontWeight: '600'}} >{show.title}</Text>
-          <Text style={styles.showText} >{show.description}</Text>
+          <Text style={{...styles.showText, }} >{show.description}</Text>
         </View>
       </View>
     )
@@ -153,7 +153,7 @@ const RestaurantLayout = ({restaurantId}) => {
       color: 'black',
       fontSize: 15,
       textAlign: 'left',
-      paddingLeft: 10,
+      marginLeft: 10,
       paddingTop: 5,
       fontWeight: '500',
     },
