@@ -29,7 +29,7 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
   const [menuColor, setMenuColour] = useState('grey');
   const [showsColor, setShowsColour] = useState('white');
 
-  const renderShow = (show) => {
+  const renderShow = ({show}) => {
     return (
       <View style={styles.showContainer} >
         <Image style={styles.showIcon} source={{uri: show.imageLink}}/>
@@ -212,13 +212,12 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
         )}
         {section === types.shows && shows?.length > 0 && (
           // Shows Available Section
-          // <FlatList
-          //   data={shows}
-          //   keyExtractor={(item) => item.id}
-          //   renderItem={(object) => renderShow(object)}
-          //   horizontal={true}
-          // />
-          <Text>{JSON.stringify(shows)}</Text>
+          <FlatList
+            data={shows}
+            keyExtractor={(item) => item.id}
+            renderItem={(object) => renderShow(object)}
+            horizontal={true}
+          />
         )}
         {section === types.shows && shows?.length == 0 && (
           // Shows Empty Section
