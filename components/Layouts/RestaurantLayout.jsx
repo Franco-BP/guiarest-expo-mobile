@@ -216,6 +216,7 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
             data={shows}
             keyExtractor={(item) => item.id}
             renderItem={(object) => renderShow(object)}
+            horizontal={true}
           />
         )}
         {section === types.shows && shows?.length == 0 && (
