@@ -75,12 +75,12 @@ const RestaurantLayout = ({restaurantId}) => {
   useEffect(() => {
     switch (section) {
       case types.menu:
-        setMenuColour('white');
-        setShowsColour('#a0a0a0');
-        break;
-      case types.shows:
         setMenuColour('#a0a0a0');
         setShowsColour('white');
+        break;
+      case types.shows:
+        setMenuColour('white');
+        setShowsColour('#a0a0a0');
         break;
     }
   }, [section]);
