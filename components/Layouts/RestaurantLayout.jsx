@@ -172,7 +172,7 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
             {restaurant?.menu}
           </Text>
         )}
-        {section === types.shows && shows?.length > 0 (
+        {section === types.shows && shows?.length > 0 && (
           // Shows Section
           <Text>
             SECTION RESTARUANT HAS SHOWS
