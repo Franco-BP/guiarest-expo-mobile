@@ -16,7 +16,7 @@ const types = {
   shows: 'shows',
 };
 
-const RestaurantLayout = ({restaurantId, showClicked}) => {
+const RestaurantLayout = ({restaurantId}) => {
   const dimensionsWidth = Dimensions.get('window').width;
   const dimensionsHeight = Dimensions.get('window').height;
 
@@ -25,7 +25,7 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
   const [shows, setShows] = useState(null);
   const mainAds = store.mainAds;
 
-  const [section, setSection] = useState(showClicked ? types.shows : types.menu);
+  const [section, setSection] = useState(types.shows);
   const [menuColor, setMenuColour] = useState('grey');
   const [showsColor, setShowsColour] = useState('white');
 

@@ -39,7 +39,7 @@ const HomeLayout = () => {
       />
       <FlatList
         data={shows}
-        renderItem={({item}) => <ShowItem title={item.title} imageLink={item.imageLink} />}
+        renderItem={({item}) => <ShowItem title={item.title} imageLink={item.imageLink} restaurantTitle={item.restaurantTitle} />}
         keyExtractor={item => item.title}
         horizontal={true}
       />
