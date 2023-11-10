@@ -29,6 +29,19 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
   const [menuColor, setMenuColour] = useState('grey');
   const [showsColor, setShowsColour] = useState('white');
 
+  const renderShow = (show) => {
+    return (
+      <View style={styles.showContainer} >
+        <Image style={styles.showIcon} source={{uri: show.imageLink}}/>
+        <View style={styles.showTextContainer}>
+          <Text style={styles.showText} >{show.title}</Text>
+          <Text style={styles.showText} >{show.description}</Text>
+        </View>
+      </View>
+    )
+  }
+
+  // Search and save of the restaurant and its shows.
   useEffect(() => {
     // Search and save of the restaurant
     // with the id passed in the props.
@@ -93,18 +106,11 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
       padding: 20,
       backgroundColor: '#f3f6f4',
     },
-    headerInfo: {
-      flexDirection: 'column',
-      alignItems: 'center',
-    },
     logo: {
       height: dimensionsWidth/5,
       width: dimensionsWidth/5,
       justifyContent: 'flex-end',
       borderRadius: 10,
-    },
-    map: {
-      width: dimensionsWidth/2.5,
     },
     buttonsContainer: {
       marginTop: 15,
@@ -122,6 +128,34 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
       borderWidth: 1,
       borderColor: 'grey',
     },
+    showContainer: {
+      width: dimensionsWidth/2.5,
+      height: dimensionsWidth/1,
+      display: 'flex',
+      flexDirection: 'row',
+      alignContent: 'center',
+      justifyContent: 'space-between',
+      marginTop: 10,
+    },
+    showIcon: {
+      height: dimensionsWidth/2.8,
+      width: dimensionsWidth/5,
+      borderRadius: 10,
+    },
+    showTextContainer: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    showText: {
+      color: 'black',
+      fontSize: 20,
+      textAlign: 'left',
+      paddingLeft: 10,
+      paddingTop: 5,
+      fontWeight: '600',
+    },
   });
 
   return (
@@ -138,7 +172,11 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
       <Carousel carouselData={mainAds} />
 
       <View style={styles.header}>
-        <View style={styles.headerInfo}>
+        <View style={{
+          flexDirection: 'column',
+          alignItems: 'center',
+          }}
+        >
           <Image
             style={styles.logo}
             source={{uri: restaurant?.imageLink}}
@@ -173,15 +211,17 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
           </Text>
         )}
         {section === types.shows && shows?.length > 0 && (
-          // Shows Section
-          <Text>
-            SECTION RESTARUANT HAS SHOWS
-          </Text>
+          // Shows Available Section
+          <FlatList
+            data={shows}
+            keyExtractor={(item) => item.id}
+            renderItem={(object) => renderShow(object)}
+          />
         )}
         {section === types.shows && shows?.length == 0 && (
-          // Shows Section
-          <Text>
-            SHOWS EMPTY SECTION
+          // Shows Empty Section
+          <Text style={{ marginTop: 20, marginLeft: 20, fontSize: 15, }} >
+            Este restaurante no tiene shows disponibles.
           </Text>
         )}
       </View>

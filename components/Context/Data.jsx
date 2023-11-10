@@ -70,35 +70,42 @@ export const SHOWS = [
     id: 1,
     title: 'Show 1',
     imageLink: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/awards-design-template-1b6f13f793c2d78d32ba6a21e18b03ca_screen.jpg?ts=1698300425',
+    description: 'This is the description.',
   },
   {
     id: 2,
     title: 'Show 2',
     imageLink: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/friday-night-party-flyer-design-template-cb1b5beeb7fd9e3ebd09b11098d75205_screen.jpg?ts=1637051467',
+    description: 'This is the description.',
   },
   {
     id: 3,
     title: 'Show 3',
     imageLink: 'https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpghttps://d1csarkz8obe9u.cloudfront.net/posterpreviews/virtual-bible-study-design-template-1e3cac9168453983597b83c30a948867_screen.jpg?ts=1689433310',
+    description: 'This is the description.',
   },
   {
     id: 4,
     title: 'Show 4',
     imageLink: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/karaoke-night-design-template-2c5074482be977baf5899499a38f6228.jpg?ts=1698299879',
+    description: 'This is the description.',
   },
   {
     id: 5,
     title: 'Show 5',
     imageLink: 'https://www.partyattheblock.com/wp-content/uploads/2021/11/Station4-College-Night_W.jpg',
+    description: 'This is the description.',
   },
   {
     id: 6,
     title: 'Show 6',
     imageLink: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-festival-vidro-template-design-42af3eb74d55759e764a53f02ce874c0_screen.jpg?ts=1636996690',
+    description: 'This is the description.',
   },
   {
     id: 7,
     title: 'Show 7',
     imageLink: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/music-festival-business-card-design-template-858164b70abdc265255c23327c77d908_screen.jpg?ts=1653119754',
+    description: 'This is the description.',
   },
 ];
