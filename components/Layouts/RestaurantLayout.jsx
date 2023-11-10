@@ -76,10 +76,10 @@ const RestaurantLayout = ({restaurantId}) => {
     switch (section) {
       case types.menu:
         setMenuColour('#a0a0a0');
-        setShowsColour('white');
+        setShowsColour('#f3f6f4');
         break;
       case types.shows:
-        setMenuColour('white');
+        setMenuColour('#f3f6f4');
         setShowsColour('#a0a0a0');
         break;
     }
