@@ -59,7 +59,7 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
     let showsIdList = tempRestaurant.showsIdList;
     let tempShows = [];
 
-    if (showsIdList.length > 0 ) {
+    if (showsIdList?.length > 0 ) {
       store.shows.map(element => {
         if (showsIdList.includes(element.id)) {
           tempShows.push(element);
