@@ -19,7 +19,7 @@ export const RESTAURANTS = [
     imageLink: 'https://www.daleeeel.com/f/res/s05/locations-photos/000/819/0081979-269-rinnoo-9f537c6de8e1478b893bd18a4185fb0e.jpg',
     description: 'Horario: de 12 a 22 horas.\nSolo retiro en el local.',
     menu: '    ⬤ Comida 1\n    ⬤ Comida 2\n    ⬤ Comida 3\n    ⬤ Comida 4',
-    showsIdList: [1],
+    showsIdList: [1, 3, 6],
   },
   {
     title: 'Grill House',
@@ -33,14 +33,14 @@ export const RESTAURANTS = [
     imageLink: 'https://marketplace.canva.com/EADiIIVxcT4/2/0/1600w/canva-negro-la-corteza-restaurante-logo-o6NfZ-Gk69A.jpg',
     description: 'Horario: de 12 a 22 horas.\nSolo retiro en el local.',
     menu: '    ⬤ Comida 1\n    ⬤ Comida 2\n    ⬤ Comida 3\n    ⬤ Comida 4',
-    showsIdList: [3],
+    showsIdList: [],
   },
   {
     title: 'Dimple',
     imageLink: 'https://static.wixstatic.com/media/0784b1_c3d17c9b44d642c59490242ef3b9bc76~mv2.png/v1/fill/w_270,h_270,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Restaurant-logo-04.png',
     description: 'Horario: de 12 a 22 horas.\nSolo retiro en el local.',
     menu: '    ⬤ Comida 1\n    ⬤ Comida 2\n    ⬤ Comida 3\n    ⬤ Comida 4',
-    showsIdList: [4],
+    showsIdList: null,
   },
   {
     title: 'SeaFood',
@@ -81,7 +81,7 @@ export const SHOWS = [
   {
     id: 3,
     title: 'Show 3',
-    imageLink: 'https://i.pinimg.com/736x/4e/13/7a/4e137af9391404ee7ee7048cdc1df1b7.jpghttps://d1csarkz8obe9u.cloudfront.net/posterpreviews/virtual-bible-study-design-template-1e3cac9168453983597b83c30a948867_screen.jpg?ts=1689433310',
+    imageLink: 'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/talent-show-flyer-template-design-8184948d685f82d4aa057ab21e418bf6_screen.jpg?ts=1636989220',
     description: 'This is the description.',
   },
   {
