@@ -29,15 +29,16 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
   const [menuColor, setMenuColour] = useState('grey');
   const [showsColor, setShowsColour] = useState('white');
 
-  const renderShow = ({show}) => {
+  const renderShow = (show) => {
     return (
-      <View style={styles.showContainer} >
-        <Image style={styles.showIcon} source={{uri: show.imageLink}}/>
-        <View style={styles.showTextContainer}>
-          <Text style={styles.showText} >{show.title}</Text>
-          <Text style={styles.showText} >{show.description}</Text>
-        </View>
-      </View>
+      // <View style={styles.showContainer} >
+      //   <Image style={styles.showIcon} source={{uri: show.imageLink}}/>
+      //   <View style={styles.showTextContainer}>
+      //     <Text style={styles.showText} >{show.title}</Text>
+      //     <Text style={styles.showText} >{show.description}</Text>
+      //   </View>
+      // </View>
+      <Text>{JSON.stringify(show)}</Text>
     )
   }
 
