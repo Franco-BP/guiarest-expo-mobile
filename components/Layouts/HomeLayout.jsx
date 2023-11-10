@@ -24,11 +24,6 @@ const HomeLayout = () => {
     scrollView: {
       backgroundColor: '#f3f6f4',
     },
-    logo: {
-      width: dimensionsWidth,
-      height: dimensionsHeight,
-      justifyContent: 'flex-start'
-    },
   });
 
   return (
