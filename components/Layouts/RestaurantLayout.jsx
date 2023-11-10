@@ -166,18 +166,24 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
         <Text style={{ marginTop: 20, marginLeft: 20, fontSize: 20, fontWeight:'600', }} >
           {section === types.menu ? 'Menu:' : 'Shows:'}
         </Text>
-        {section === types.menu ? (
+        {section === types.menu && (
           // Menu Section
           <Text style={{ marginTop: 20, marginLeft: 20, fontSize: 15, }} >
             {restaurant?.menu}
           </Text>
-        ) : (
+        )}
+        {section === types.shows && shows?.length > 0 (
           // Shows Section
           <Text>
-            SHOWS COMPONENTS NOT READY YET
+            SECTION RESTARUANT HAS SHOWS
           </Text>
-        )
-        };
+        )}
+        {section === types.shows && shows?.length == 0 (
+          // Shows Section
+          <Text>
+            SHOWS EMPTY SECTION
+          </Text>
+        )}
       </View>
     </ScrollView>
   )
