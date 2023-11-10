@@ -178,7 +178,7 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
             SECTION RESTARUANT HAS SHOWS
           </Text>
         )}
-        {section === types.shows && shows?.length == 0 (
+        {section === types.shows && shows?.length == 0 && (
           // Shows Section
           <Text>
             SHOWS EMPTY SECTION
