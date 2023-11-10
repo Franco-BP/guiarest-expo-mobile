@@ -212,12 +212,13 @@ const RestaurantLayout = ({restaurantId, showClicked}) => {
         )}
         {section === types.shows && shows?.length > 0 && (
           // Shows Available Section
-          <FlatList
-            data={shows}
-            keyExtractor={(item) => item.id}
-            renderItem={(object) => renderShow(object)}
-            horizontal={true}
-          />
+          // <FlatList
+          //   data={shows}
+          //   keyExtractor={(item) => item.id}
+          //   renderItem={(object) => renderShow(object)}
+          //   horizontal={true}
+          // />
+          <Text>{JSON.stringify(shows)}</Text>
         )}
         {section === types.shows && shows?.length == 0 && (
           // Shows Empty Section
