@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Carousel from '../Carousel/Carousel';
 import MapView from 'react-native-maps';
-import { Dimensions, ScrollView, StyleSheet, View, Text, Button, Image, TouchableOpacity } from 'react-native';
+import { Dimensions, ScrollView, StyleSheet, View, Text, Button, Image, TouchableOpacity, FlatList } from 'react-native';
 import { storeContext } from '../Context/StoreProvider';
 import { Link } from 'expo-router';
 
